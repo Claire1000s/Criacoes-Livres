@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Aula 04 - JavaScript Extra</title>
+
+		<script type="text/javascript">
+			var acendeu = 0;
+			
+			function manipularLampada()
+			{
+				var lamp = document.getElementById("lampada");
+
+				if(acendeu == 0)
+				{
+					acendeu = 1;
+					lamp.src = 'lampada-acesa.jpg';
+				}
+				else
+				{
+					acendeu = 0;
+					lamp.src = 'lampada-apagada.jpg';
+				}
+			}
+		</script>
+	</head>
+
+	<body onload="alert('Carregado');">
+		<p>Javascript Aula 04</p>
+		<img id="lampada" onClick="manipularLampada();" src="lampada-apagada.jpg" />
+	</body>
+</html>
