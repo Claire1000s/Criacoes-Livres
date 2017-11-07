@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="pt-bt">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Boneco dançando em Javascript</title>
+		<script type="text/javascript">
+			function danca()
+			{
+				var boneco = document.getElementById("boneco");
+				boneco.src = 'boneco';
+
+				var novoSrc;
+
+				for(var i = 2; i <= 4; i++)
+				{	
+					novoSrc = 'playerPasso2_0' + i + '.png';
+					boneco.src = novoSrc;
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<img id="boneco" src="playerPasso2_01.png" />
+		<button onclick="danca();">Dançar</button>
+	</body>
+</html>
